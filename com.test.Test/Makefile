@@ -1,3 +1,5 @@
+.PHONY: build test
+
 build:
 	echo "starting flatpak build..."
 	flatpak-builder \
@@ -10,3 +12,6 @@ build:
 		--arch=x86_64 \
 		--install builddir/ \
 		com.test.Test.yaml
+	
+test:
+	flatpak run com.test.Test
