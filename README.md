@@ -6,12 +6,14 @@ This is my learnings of trying to get a appimage to flatpak with tauri v1 workin
 
 Build the tauri app
 ```
+# in the app dir
 pnpm i
 pnpm tauri build
 ```
 
-Start the flatpak build
+Start the flatpak build (will take ~1 hour to compile webkitgtk, subsquent runs will use `builddir` cache)
 ```
+# in the com.test.Test dir
 make
 ```
 
