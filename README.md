@@ -2,6 +2,15 @@
 
 This is my learnings of trying to get a appimage to flatpak with tauri v1 working...
 
+## Status
+currently it segfaults when starting the app:
+```
+[📦 com.test.Test ~]# /app/bin/test
+/app/bin/test-wrapped: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), statically linked, BuildID[sha1]=4e3572800bcf592883a92979b01cc49c9c0a2e4a, for GNU/Linux 3.2.0, stripped
+Starting the test app...
+Segmentation fault
+```
+
 ## Setup
 
 Build the tauri app
