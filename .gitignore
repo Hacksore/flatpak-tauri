@@ -1,2 +1,4 @@
-.flatpak
+.flatpak-builder
 builddir
+target
+node_modules

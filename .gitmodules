@@ -1,0 +1,3 @@
+[submodule "com.test.Test/shared-modules"]
+	path = com.test.Test/shared-modules
+	url = https://github.com/flathub/shared-modules

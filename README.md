@@ -1,0 +1,3 @@
+# Tauri AppImage to Flatpak
+
+This is my notes of trying to get a flatpak to appimage working...

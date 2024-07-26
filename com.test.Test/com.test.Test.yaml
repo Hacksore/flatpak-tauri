@@ -60,8 +60,8 @@ modules:
 
     sources:
       - type: file
-        url: https://github.com/testdev/test/releases/download/v0.5.0/test_0.5.0_amd64.AppImage
-        sha256: bbcc773e89ba6cdbf4b3e91156b2702b2a82a91b5df7a8bbd2e274d5104a9725
+        path: ../app/src-tauri/target/release/bundle/appimage/test_0.0.0_amd64.AppImage
+        sha256: fb5d16e6b353fb81081716c84c07a258d8c109eabe2bb6b77c72c2f1cae4ba9c
         dest-filename: test.AppImage
         only-arches: [x86_64]
   # Wrap the executable in a wrapper to run scripts before running it
