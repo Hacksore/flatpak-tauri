@@ -58,6 +58,7 @@ modules:
     sources:
       - type: file
         path: ../app/src-tauri/target/release/bundle/deb/test_0.0.0_amd64.deb
+        # NOTE: this might not be idempotent 
         sha256: 5a8a1353e3ba3202e83020ae6a22ddc05f55e932f2c9c7ee223acbc7c5dc55b9
         dest-filename: app.deb
         only-arches: [x86_64]
