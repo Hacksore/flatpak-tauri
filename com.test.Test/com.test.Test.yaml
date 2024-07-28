@@ -1,7 +1,7 @@
 id: com.test.Test
 
 runtime: org.gnome.Platform
-runtime-version: '46'
+runtime-version: "46"
 sdk: org.gnome.Sdk//46
 
 command: test
@@ -45,27 +45,21 @@ modules:
             url: https://dotat.at/prog/unifdef/unifdef-2.12.tar.xz
             sha256: 43ce0f02ecdcdc723b2475575563ddb192e988c886d368260bc0a63aee3ac400
         cleanup:
-          - '*'
+          - "*"
 
   - shared-modules/libappindicator/libappindicator-gtk3-12.10.json
 
   - name: test
     buildsystem: simple
     build-commands:
-      - ar -x *.deb
+      - bsdtar -Oxf app.deb 'data.tar.gz' | bsdtar -xf -
       - tar -xf data.tar.gz
-      - mkdir -p /app/bin
-      - mkdir -p /app/share/applications
-      - mkdir -p /app/share/icons/hicolor/32x32/apps
-      - mkdir -p /app/share/icons/hicolor/128x128/apps
-      - mkdir -p /app/share/icons/hicolor/256x256/apps
-      - mkdir -p /app/share/man/man1/
       - install -Dm755 usr/bin/* /app/bin
     sources:
       - type: file
         path: ../app/src-tauri/target/release/bundle/deb/test_0.0.0_amd64.deb
         sha256: 5a8a1353e3ba3202e83020ae6a22ddc05f55e932f2c9c7ee223acbc7c5dc55b9
-        dest-filename: app.deb 
+        dest-filename: app.deb
         only-arches: [x86_64]
   # Wrap the executable in a wrapper to run scripts before running it
   - name: wrapper
