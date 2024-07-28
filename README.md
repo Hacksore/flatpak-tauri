@@ -2,6 +2,9 @@
 
 This is my learnings of trying to get a appimage to flatpak with tauri v1 working...
 
+> [!NOTE]
+> Checkout the [`deb` branch](https://github.com/Hacksore/flatpak-tauri/tree/deb) for a working solution
+
 ## Status
 currently it segfaults when starting the app:
 ```
